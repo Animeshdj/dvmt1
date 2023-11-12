@@ -1,0 +1,171 @@
+@font-face {
+    font-family: RazerF5;
+    src: url(razerf5-reg.otf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: Razerf5,Roboto,Helvetica,Arial,sans-serif;
+    background-color: #000;
+    width: 100%;
+}
+
+nav img{
+    height: 2rem;
+}
+
+nav{
+    background: #000;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid #44d62c;
+    justify-content: center;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 99;
+    align-items: center;
+}
+
+nav.is-active{
+    border: none;
+}
+
+.cart.is-active{
+    display: none;
+}
+
+nav li a{
+    display: inline-block;
+    color: gray;
+    margin: 0 2rem;
+}
+
+section {
+    background-color: gray;
+}
+
+.hamburger, .cart{
+    display: none;
+}
+
+@media (max-width: 1150px){
+    nav li a{
+        margin: 0 0.7rem;
+    }
+}
+@media (max-width: 767px){
+    nav{
+        height: 48px;
+    }
+    nav li a{
+        display: none;
+    }
+    nav li:first-child a{
+        display: inline-block;
+        justify-content: start;
+        align-items: start;
+    }
+    /* .hamburger{
+        display: inline;
+        position: absolute;
+        top: -3px;
+        margin-left: 20px;
+        color: gray;
+        z-index: 100;
+        cursor: pointer;
+    } */
+    .cart{
+        display: inline;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: gray;
+        z-index: 100;
+        font-size: 30px;
+    }
+    .hamburger{
+        position: absolute;
+        display: block;
+        width: 25px;
+        aspect-ratio: 1;
+        cursor: pointer;
+        appearance: none;
+        background: none;
+        outline: none;
+        border: none;
+        top: 5px;
+        left: 15px;
+        z-index: 101;
+    }
+    .hamburger .bar, .hamburger::after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: gray;
+        margin: 10px 0;
+        z-index: 101;
+    }
+
+    .hamburger.is-active::after{
+        transform: rotate(45deg) translate(8px, 0px);
+    }
+
+    .hamburger.is-active .bar{
+        transform: rotate(-45deg) translate(-8px, 16px);
+    }
+
+    .hamburger.is-active{
+        top: -5px;
+        left: 10px;
+    }
+}
+
+.mobile-nav{
+    position: fixed;
+    /* top: 0; */
+    /* right: 100%; */
+    width: 100%;
+    min-height: 100vh;
+    display: block;
+    background-color: #000;
+    z-index: 100;
+}
+
+.mobile-nav ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+    margin-top: 17.5px;
+}
+
+.mobile-nav a{
+    display: block;
+    text-align: left;
+    border-bottom: 1px solid #555;
+    color: #888;
+    line-height: 46px;
+    padding: 4px 0px;
+    font-size: 17px;
+}
+
+.mobile-nav input{
+    background: #222;
+    border: 0;
+    border-radius: 10px;
+    padding-left: 30px;
+    margin: 40px 18px 0 18px;
+    height: 40px;
+    width: calc(100% - 36px);
+    font-family: Razerf5,Roboto,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+}
