@@ -17,11 +17,11 @@ body{
     width: 100%;
 }
 
-nav img{
+.main-nav img{
     height: 2rem;
 }
 
-nav{
+.main-nav{
     background: #000;
     height: 60px;
     width: 100%;
@@ -35,7 +35,7 @@ nav{
     align-items: center;
 }
 
-nav.is-active{
+.main-nav.is-active{
     border: none;
 }
 
@@ -43,10 +43,14 @@ nav.is-active{
     display: none;
 }
 
-nav li a{
+.main-nav li a{
     display: inline-block;
-    color: gray;
+    color: #888;
     margin: 0 2rem;
+}
+
+.main-nav li a:hover{
+    color: #fff;
 }
 
 section {
@@ -58,31 +62,22 @@ section {
 }
 
 @media (max-width: 1150px){
-    nav li a{
+    .main-nav li a{
         margin: 0 0.7rem;
     }
 }
 @media (max-width: 767px){
-    nav{
+    .main-nav{
         height: 48px;
     }
-    nav li a{
+    .main-nav li a{
         display: none;
     }
-    nav li:first-child a{
+    .main-nav li:first-child a{
         display: inline-block;
         justify-content: start;
         align-items: start;
     }
-    /* .hamburger{
-        display: inline;
-        position: absolute;
-        top: -3px;
-        margin-left: 20px;
-        color: gray;
-        z-index: 100;
-        cursor: pointer;
-    } */
     .cart{
         display: inline;
         position: absolute;
@@ -151,11 +146,37 @@ section {
 .mobile-nav a{
     display: block;
     text-align: left;
-    border-bottom: 1px solid #555;
     color: #888;
-    line-height: 46px;
-    padding: 4px 0px;
+    line-height: 42px;
     font-size: 17px;
+}
+
+.mobile-nav li{
+    border-bottom: 1px solid #555;
+    padding: 8px 0px;
+}
+
+.mobile-nav a:hover{
+    color: #fff;
+}
+
+.mobile-nav li:nth-of-type(2) a:hover{
+    color: #888;
+}
+
+.mobile-nav li:nth-of-type(2){
+    border-bottom: none;
+    padding: 0px;
+}
+
+.icon-angle-left{
+    background-image: url(https://www.razer.com/assets/images/icons/icon-arrow-right.svg);
+    background-size: 100% 100%;
+    display: inline-block;
+    height: 15px;
+    margin: 3px 0 5px 6px;
+    vertical-align: middle;
+    width: 15px;
 }
 
 .mobile-nav input{
@@ -168,4 +189,8 @@ section {
     width: calc(100% - 36px);
     font-family: Razerf5,Roboto,Helvetica,Arial,sans-serif;
     font-size: 16px;
+}
+
+.mobile-nav.is-active{
+    display: none;
 }
