@@ -13,7 +13,7 @@
 
 body{
     font-family: Razerf5,Roboto,Helvetica,Arial,sans-serif;
-    background-color: #000;
+    background-color: #222;
     width: 100%;
 }
 
@@ -33,6 +33,7 @@ body{
     top: 0;
     z-index: 99;
     align-items: center;
+    font-size: 1rem;
 }
 
 .main-nav.is-active{
@@ -51,10 +52,6 @@ body{
 
 .main-nav li a:hover{
     color: #fff;
-}
-
-section {
-    background-color: gray;
 }
 
 .hamburger, .cart{
@@ -123,11 +120,33 @@ section {
         top: -5px;
         left: 10px;
     }
+
+    .notification{
+        padding: 11.5px 40px 9.5px 30px;
+    }
+
+    .picture-1 h1{
+        font-size: 2rem;
+        letter-spacing: .0625rem;
+        margin-top: 20px;
+    }
+
+    .picture-1 h2{
+        font-size: 1.25rem;
+        font-weight: 75;
+    }
+
+    .picture-1 h3{
+        font-size: 1rem;
+        font-weight: 50;
+        display: inline-block;
+    }
 }
 
 .mobile-nav{
     position: fixed;
-    /* top: 0; */
+    left: 0;
+    top: 48px;
     /* right: 100%; */
     width: 100%;
     min-height: 100vh;
@@ -193,4 +212,79 @@ section {
 
 .mobile-nav.is-active{
     display: none;
+}
+
+.notification{
+    background: #555;
+    color: #eee;
+    text-align: center;
+    font-size: 14px;
+    min-height: 44px;
+    font-family: Roboto,sans-serif;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 11.5px 24px 9.5px 30px;
+}
+
+.notification-link{
+    color: #eee;
+}
+
+.picture-1{
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+    font-family: RazerF5,Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+.picture-1 h1,h2,h3{
+    z-index: 1;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+
+@media (min-width: 768px){
+    .picture-1 h1{
+        font-size: 3.4rem;
+        letter-spacing: .0625rem;
+    }
+
+    .picture-1 h2{
+        font-size: 1.7rem;
+        font-weight: 100;
+    }
+
+    .picture-1 h3{
+        font-size: 1.25rem;
+        font-weight: 50;
+        display: inline-block;
+    }
+}
+
+.picture-1-img{
+    position: absolute;
+    width: 100%;
+    height: 75vh;
+    min-height: 700px;
+    object-fit: cover;
+    object-position: center bottom;
+    /* border-bottom: 10px solid #222; */
+}
+
+.picture-1-link{
+    margin-bottom: 10px;
+}
+
+.section-1{
+    display: flex;
+    flex-direction: column;
+}
+
+.picture-1 h3:hover{
+    text-decoration-line: underline;
 }
