@@ -248,12 +248,12 @@ main.is-active{
     text-align: center;
 }
 
-.picture-2 a{
+.picture-2-link{
     position: absolute;
     left: 0;
     height: 100%;
     width: 100%;
-    z-index: 10;
+    z-index: 2;
 }
 
 .picture-2 img{
@@ -267,14 +267,119 @@ main.is-active{
     object-position: center;
 }
 
-.picture-2 h1,.picture-2 h2,.picture-2 h3{
-    z-index: 1;
+.picture-2 h1,.picture-2 h2, .picture-2-link-2{
+    z-index: 2;
     margin-bottom: 10px;
     position: relative;
+    color: #fff;
 }
 
 .picture-2 h1{
     margin-top: 40px;
+}
+
+.picture-2 a:hover{
+    text-decoration-line: underline;
+}
+
+footer{
+    background: #111;
+    font-size: 12px;
+    outline: 0;
+    padding: 1.5rem;
+    color: #fff;
+    margin: auto;
+    font-family: Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,apple color emoji,segoe ui emoji,Segoe UI Symbol,noto color emoji;
+}
+
+.footer{
+    outline: 0;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,apple color emoji,segoe ui emoji,Segoe UI Symbol,noto color emoji;
+    border-bottom: 1px solid #888;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-top{
+    padding-bottom: 0.6rem;
+    display: block;
+}
+
+.footer-header{
+    padding-bottom: 12px;
+}
+
+.footer-item{
+    padding: 4px 0 12px 0;
+}
+
+.footer-item a{
+    color: #888;
+}
+
+.footer-item a:hover{
+    text-decoration: underline;
+    color: #fff;
+}
+
+.col-last{
+    color: #44d62c;
+    font-size: 0.9rem;
+    font-family: RazerF5, Arial, Helvetica, sans-serif;
+    letter-spacing: 0.5px;
+    text-align: end;
+    padding: 0 12px;
+    width: 25%;
+}
+
+.col-last span{
+    padding-right: 0.4rem;
+    padding-bottom: 0.25rem;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+.copyright, .legal-terms{
+    display: inline-block;
+    color: #999;
+}
+
+
+.legal-terms ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.legal-terms ul li{
+    padding: 0 1.5rem;
+    border-right: 1px solid #999;
+}
+
+.legal-terms ul li:last-of-type{
+    border-right: none;
+}
+
+.legal-terms ul li a, .location a{
+    color: #999;
+}
+
+.legal-terms ul li a:hover, .location a:hover{
+    text-decoration: underline;
+    color: #fff;
+}
+
+.country{
+    display: inline-block;
 }
 
 @media (max-width: 1150px){
