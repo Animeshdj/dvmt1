@@ -498,4 +498,8 @@ footer{
         width: auto;
         padding: 0 0 10px 0;
     }
+
+    .location{
+        display: none;
+    }
 }
